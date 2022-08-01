@@ -5,6 +5,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
+    margin:20px;
 
 }
 .container {
@@ -12,6 +13,7 @@ body{
     width:60%;
     margin: 0 auto;
     border: 2px solid;  
+    border-radius: 15px;
 }
 form{
     display: flex;
@@ -52,21 +54,34 @@ hr{
     border-bottom: 1px solid;
     font-size: 1.5rem;
     display:flex;
+    transition: ease .7s;
 }
 .check-button {
     margin-left: auto;
-    width:50px;
-    font-size: 20px;
+    width:65px;
+    font-size: 30px;
     background-color: rgb(136, 223, 136);
     border:none;
     cursor: pointer;
 
 }
 .trash-button{
-    width:50px;
+    width:65px;
     font-size: 20px;
     background-color: rgb(255, 0, 0);
     border:none;
     cursor: pointer;
     color:white;
+}
+.fa-solid{
+    pointer-events: none;
+}
+.mark {
+    background-color: rgb(136, 223, 136);
+    opacity: .5;
+    text-decoration: line-through;
+}
+.remove {
+    transform: rotateZ(90deg);
+    opacity: 0;
 }

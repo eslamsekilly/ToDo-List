@@ -28,6 +28,17 @@ function clearList () {
     listContainer.innerHTML ="";
 }
 
+function markOrDelete(event) {
+    const item = event.target
+    if (item.classList[0] == "check-button"){
+        item.parentElement.classList.toggle("mark") ;
+    }else if(item.classList[0] == "trash-button"){
+        item.parentElement.classList.add("remove")
+        item.parentElement.addEventListener("transitionend", ()=>{item.parentElement.remove();})
+    }
+}
+
 //Event listener
 button.addEventListener("click", addToList)
 clearAll.addEventListener("click", clearList)
+listContainer.addEventListener("click", markOrDelete)
