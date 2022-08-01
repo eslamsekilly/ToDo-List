@@ -12,6 +12,16 @@ function addToList(event){
     input.value = ""
     newDev.classList.add("todo-item")
     listContainer.appendChild(newDev)
+    // adding check button
+    const checkBotton = document.createElement("button");
+    checkBotton.innerHTML = '<i class="fa-solid fa-check"></i>'
+    checkBotton.classList.add("check-button")
+    newDev.appendChild(checkBotton);
+    // adding trash button
+    const trashBotton = document.createElement("button");
+    trashBotton.innerHTML = '<i class="fa-solid fa-trash-can"></i>'
+    trashBotton.classList.add("trash-button")
+    newDev.appendChild(trashBotton);
 }}
 
 function clearList () {
