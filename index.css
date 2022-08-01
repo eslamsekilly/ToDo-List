@@ -82,7 +82,7 @@ hr{
     text-decoration: line-through;
 }
 .remove {
-    transform: rotateZ(90deg);
+    transform: rotateY(60deg);
     opacity: 0;
     background-color: rgb(255, 0, 0);
 }
